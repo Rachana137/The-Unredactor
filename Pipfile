@@ -9,6 +9,7 @@ nltk = "*"
 numpy = "*"
 pandas = "*"
 sklearn = "*"
+pytest = "*"
 
 [dev-packages]
 

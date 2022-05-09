@@ -127,15 +127,16 @@ def get_scores(train, test):
     print('Precision score: ', p)
     print('Recall score: ', r)
     print('F1 score: ', f)
+    return pred
 
 
 def main(dset):
     url = 'https://raw.githubusercontent.com/cegme/cs5293sp22/main/unredactor.tsv'
     train, test, validation = get_data(url)
     if dset=='validation':
-        get_scores(train,validation)
+        p=get_scores(train,validation)
     if dset=='testing':
-        get_scores(train,test)
+        p=get_scores(train,test)
 
 import argparse
 if __name__ == '__main__':
