@@ -61,6 +61,7 @@ Precision score:  0.005063291139240506
 Recall score:  0.005063291139240506
 F1 score:  0.0072482832795565475
 ```
+## Instance machine used- e2-medium (2 vCPU, 4 GB memory)
 
 # Assumptions or Bugs
 The assumptions made are assuming that redacted data in the each sentence are exactly one name not multiple names.
