@@ -199,7 +199,7 @@ This file contains test cases to test functions in project3.py. There are five t
     This function tests the function get_scores() whether the type of returned value is not None type.
     
 
-To test the testcases run:
+ To test the testcases run:
 
     ```
     pipenv run pytest 
@@ -207,7 +207,6 @@ To test the testcases run:
     pipenv run python -m pytest
     ```
     
-    
-    # References
+# References
     
     https://stackoverflow.com/questions/18016037/pandas-parsererror-eof-character-when-reading-multiple-csv-files-to-hdf5
