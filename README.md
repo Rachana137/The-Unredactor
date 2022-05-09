@@ -136,6 +136,78 @@ The following methods are written in project3.py file and performs the below fun
 
     This functions are used for getting the data from text files and identifying the person names and redacting them by a block character u"\u2588".
     
+    # test_all.py
+
+This file contains test cases to test functions in project3.py. There are five test cases one each for **features(sentence)**, **filt_sentences(sentence)**, **words(sentence)**, **get_features(data)**, **get_scores(train, test)**.
+
+## Packages required
+```
+    pipenv install pytest
+    import pytest
+    import pandas as pd
+```
+
+1. **test_features()
+
+    This function tests the function features(sentence) whether it returns the correct length of redacted wordd in the given sentence.
+    ```bash
+    def test_features():
+        masked="I couldn't image ██████████████ in a serious role, but his performance truly"
+        length=p.features(masked)
+        assert length==14
+    ```
+
+2. **test_filt_sentence()**
+
+    This function tests the function filt_sentences() whether the returned data is in type of list.
+    ```bash
+    def test_filt_sentence():
+        sentence="I couldn't image ██████████████ in a serious role, but his performance truly"
+        l1=p.filt_sentences(sentence)
+        assert type(l1)==list
+    ```
+    
+3. **test_words()**
+
+    This function tests the function words() if the data returned is the type of int or not.
+    ```bash
+    def test_words():
+        sentence="I couldn't image ██████████████ in a serious role, but his performance truly"
+        l2=p.words(sentence)
+        assert type(l2)==int
+    ```
+    
+4. **test_get_features()
+
+    This function tests the function get_features() whether the returned list values are of type dict.
+    
+    ```bash
+    def test_get_features():
+        df=pd.DataFrame()
+        df['username']=['abc']
+        df['set']=['training']
+        df['name']=['aston kutcher']
+        df['sentence']=["I couldn't image ██████████████ in a serious role, but his performance truly"]
+        df['no_words']=[10]
+        df['length_masked']=[14]
+        l3=p.get_features(df)
+        assert type(l3[0])==dict
+    ```
+    
+5. **test_get_scores()
+
+    This function tests the function get_scores() whether the type of returned value is not None type.
+    
+
+To test the testcases run:
+
+    ```
+    pipenv run pytest 
+    or
+    pipenv run python -m pytest
+    ```
+    
+    
     # References
     
     https://stackoverflow.com/questions/18016037/pandas-parsererror-eof-character-when-reading-multiple-csv-files-to-hdf5
