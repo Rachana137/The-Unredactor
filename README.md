@@ -1,9 +1,7 @@
-# Cs5293sp22-project3
-
-## The Unredactor
+# The Unredactor
 
 ### RACHANA VELLAMPALLI
-### rachana@ou.edu
+
 
  Whenever sensitive information is shared with the public, the data must go through a redaction process. That is, all sensitive names, places, and other sensitive information must be hidden. Documents such as police reports, court transcripts, and hospital records all contain sensitive information. Redacting this information is often expensive and time consuming.
 In this Project3, The unredactor will take redacted documents and return the most likely candidates to fill in the redacted location.
@@ -71,7 +69,6 @@ There are no bugs in the provided code.
 
 The key to this task is to (1) make it easy for a peer to use your code to execute the model on the validations set; (2) generate a precision, recall, and f1-score of the code for the dataset. 
 
-# project3.py
 
 In this project for feature extraction considered (1) The length of masked data in a sentence and (2) The number of words in a sentence.
 
